@@ -6,6 +6,9 @@ Michael Lindner-D'Addario
 DATE:
 January 9th 2019
 
+LANGUAGES:
+C (through Linux)
+
 INTRO:
 The tic tac toe game is an interactive game where a user can play tic tac toe on a board of any dimension against a computer, which will play perfectly. It can either be played online through a server, or offline through the terminal.
 
