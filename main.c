@@ -10,7 +10,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "ttt_game.h"
-#include "optimal_play.h"
 #include "full_solve.h"
 
 int main(){
