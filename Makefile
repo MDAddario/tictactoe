@@ -1,4 +1,4 @@
-SRCS = ttt_game.c full_solve.c optimal_play.c
+SRCS = ttt_game.c full_solve.c
 OBJS = ${SRCS:.c=.o}
 HDS = ${SRCS:.c=.h}
 
