@@ -115,7 +115,7 @@ node* tree_generation(int isDebug){
 	// Print outcome
 	char result[100];
 	if (isDebug){
-		sprintf(result, "The outcome of %s %dx%d is:", ttt->gamename, DIMENSION, DIMENSION);
+		sprintf(result, "The outcome of Tic-tac-toe %dx%d is:", DIMENSION, DIMENSION);
 		if (code == 1)
 			printf("%s A tie!\n", result);
 		else if (code == 2)
