@@ -4,7 +4,6 @@
 * Contains all the basic logic for a ttt game.
 *
 * AUTHOR: Michael Lindner-D'Addario
-* DATE: Jan 09 2019
 ***********************************************************/
 
 #include <stdio.h>
@@ -16,22 +15,14 @@ game* game_init(){
 
 	game* ttt = (game*)malloc(sizeof(game));
 
-	strcpy(ttt->gamename, "Tic Tac Toe");
 	ttt->ply = 1;
 	ttt->isActive = 1;
-	ttt->dimension = DIMENSION;
 
 	for (int i = 0; i < DIMENSION; i++)
 		for (int j = 0; j < DIMENSION; j++){
 			ttt->x_array[i][j] = 0;
 			ttt->o_array[i][j] = 0;
 		}
-
-	// Additional network functionality
-	ttt->player = NULL;
-	ttt->next = NULL;
-	ttt->tree = NULL;
-
 	return ttt;
 }
 
@@ -178,26 +169,6 @@ void print_game(game* ttt){
 	}
 	//printf("Current ply: %d\n", ttt->ply);
 	//printf("Game state:  %d\n", ttt->isActive);
-	return;
-}
-
-void sprint_game(game* ttt, char* response){
-
-	for (int i = 0; i < DIMENSION; i++){
-
-		sprintf(response, "%s[", response);
-
-		for (int j = 0; j < DIMENSION; j++){
-
-			if (ttt->x_array[i][j])
-				sprintf(response, "%s x ", response);
-			else if (ttt->o_array[i][j])
-				sprintf(response, "%s o ", response);
-			else
-				sprintf(response, "%s . ", response);
-		}
-		sprintf(response, "%s]\n", response);
-	}
 	return;
 }
 
