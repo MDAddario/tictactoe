@@ -1,19 +1,17 @@
+SRCS = ttt_game.c full_solve.c optimal_play.c
+OBJS = ${SRCS:.c=.o}
+HDS = ${SRCS:.c=.h}
+
 DIMENSION = 3
 DEFINE = -DDIMENSION=${DIMENSION}
 
 all: main
 
-main: main.c ttt_game.o full_solve.o optimal_play.o
-	gcc main.c ttt_game.o full_solve.o optimal_play.o -o main ${DEFINE}
+main: main.c ${OBJS}
+	gcc main.c ${OBJS} -o main ${DEFINE}
 
-ttt_game.o: ttt_game.c ttt_game.h
-	gcc ttt_game.c -c ${DEFINE}
-
-full_solve.o: full_solve.c full_solve.h ttt_game.c ttt_game.h
-	gcc full_solve.c -c ${DEFINE}
-
-optimal_play.o: optimal_play.c optimal_play.h ttt_game.c ttt_game.h
-	gcc optimal_play.c -c ${DEFINE}
+.c.o: ${SRCS} ${HDS}
+	gcc -c $< ${DEFINE}
 
 clean:
-	rm -f main ttt_game.o full_solve.o optimal_play.o
+	rm -f main ${OBJS}
