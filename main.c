@@ -1,7 +1,7 @@
 /*********************************************************
 * FILE: main.c
 *
-* Main program that allows the player to play offline
+* Main program that allows the player to play
 * against the perfect computer.
 *
 * AUTHOR: Michael Lindner-D'Addario
