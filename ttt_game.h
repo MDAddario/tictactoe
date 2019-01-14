@@ -46,3 +46,6 @@ void rollback(game*, int, int);
 
 // Print the board to the terminal for debugging purposes
 void print_game(game*);
+
+// Initialize game tree node attributes
+node* node_init();
