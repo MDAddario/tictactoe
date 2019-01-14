@@ -1,11 +1,10 @@
 /*********************************************************
-* FILE: offline.c
+* FILE: main.c
 *
 * Main program that allows the player to play offline
 * against the perfect computer.
 *
 * AUTHOR: Michael Lindner-D'Addario
-* DATE: Jan 09 2019
 ***********************************************************/
 
 #include <stdio.h>
