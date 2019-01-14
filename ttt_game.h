@@ -7,29 +7,13 @@ typedef struct tree_node_struct{
 
 } node;
 
-// Networking struct for player
-typedef struct ttt_user_struct{
-
-	char username[100];
-	char password[100];
-	struct ttt_user_struct *next;
-
-} user;
-
 // Struct for entire tic tac toe game
 typedef struct ttt_game_struct{
 
-	char gamename[30];
 	int ply;
-	int isActive;
-	int dimension;
+	int isActive
 	int x_array[DIMENSION][DIMENSION];
 	int o_array[DIMENSION][DIMENSION];
-
-	// Additional network functionality fields
-	user* player;
-	struct ttt_game_struct* next;
-	node* tree;
 
 } game;
 
@@ -62,9 +46,3 @@ void rollback(game*, int, int);
 
 // Print the board to the terminal for debugging purposes
 void print_game(game*);
-
-// Print board to string for network functionality
-void sprint_game(game*, char*);
-
-// Initialize game tree node attributes
-node* node_init();
