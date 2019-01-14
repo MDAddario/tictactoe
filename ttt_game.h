@@ -11,7 +11,7 @@ typedef struct tree_node_struct{
 typedef struct ttt_game_struct{
 
 	int ply;
-	int isActive
+	int isActive;
 	int x_array[DIMENSION][DIMENSION];
 	int o_array[DIMENSION][DIMENSION];
 
